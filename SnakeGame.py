@@ -1,29 +1,46 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": 1,
-   "id": "9784c9d1-a6ab-4ff1-8e67-51fc2957c2cc",
-   "metadata": {},
-   "outputs": [
-    {
-     "ename": "Terminator",
-     "evalue": "",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[1;31mTerminator\u001b[0m                                Traceback (most recent call last)",
-      "Cell \u001b[1;32mIn[1], line 93\u001b[0m\n\u001b[0;32m     91\u001b[0m \u001b[38;5;66;03m# Main game loop\u001b[39;00m\n\u001b[0;32m     92\u001b[0m \u001b[38;5;28;01mwhile\u001b[39;00m \u001b[38;5;28;01mTrue\u001b[39;00m:\n\u001b[1;32m---> 93\u001b[0m     wn\u001b[38;5;241m.\u001b[39mupdate()\n\u001b[0;32m     95\u001b[0m     \u001b[38;5;66;03m# Check for a collision with the border\u001b[39;00m\n\u001b[0;32m     96\u001b[0m     \u001b[38;5;28;01mif\u001b[39;00m head\u001b[38;5;241m.\u001b[39mxcor()\u001b[38;5;241m>\u001b[39m\u001b[38;5;241m290\u001b[39m \u001b[38;5;129;01mor\u001b[39;00m head\u001b[38;5;241m.\u001b[39mxcor()\u001b[38;5;241m<\u001b[39m\u001b[38;5;241m-\u001b[39m\u001b[38;5;241m290\u001b[39m \u001b[38;5;129;01mor\u001b[39;00m head\u001b[38;5;241m.\u001b[39mycor()\u001b[38;5;241m>\u001b[39m\u001b[38;5;241m290\u001b[39m \u001b[38;5;129;01mor\u001b[39;00m head\u001b[38;5;241m.\u001b[39mycor()\u001b[38;5;241m<\u001b[39m\u001b[38;5;241m-\u001b[39m\u001b[38;5;241m290\u001b[39m:\n",
-      "File \u001b[1;32mC:\\ProgramData\\anaconda3\\Lib\\turtle.py:1295\u001b[0m, in \u001b[0;36mTurtleScreen.update\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m   1293\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_tracing \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;01mTrue\u001b[39;00m\n\u001b[0;32m   1294\u001b[0m \u001b[38;5;28;01mfor\u001b[39;00m t \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mturtles():\n\u001b[1;32m-> 1295\u001b[0m     t\u001b[38;5;241m.\u001b[39m_update_data()\n\u001b[0;32m   1296\u001b[0m     t\u001b[38;5;241m.\u001b[39m_drawturtle()\n\u001b[0;32m   1297\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_tracing \u001b[38;5;241m=\u001b[39m tracing\n",
-      "File \u001b[1;32mC:\\ProgramData\\anaconda3\\Lib\\turtle.py:2654\u001b[0m, in \u001b[0;36mRawTurtle._update_data\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m   2653\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m_update_data\u001b[39m(\u001b[38;5;28mself\u001b[39m):\n\u001b[1;32m-> 2654\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mscreen\u001b[38;5;241m.\u001b[39m_incrementudc()\n\u001b[0;32m   2655\u001b[0m     \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mscreen\u001b[38;5;241m.\u001b[39m_updatecounter \u001b[38;5;241m!=\u001b[39m \u001b[38;5;241m0\u001b[39m:\n\u001b[0;32m   2656\u001b[0m         \u001b[38;5;28;01mreturn\u001b[39;00m\n",
-      "File \u001b[1;32mC:\\ProgramData\\anaconda3\\Lib\\turtle.py:1284\u001b[0m, in \u001b[0;36mTurtleScreen._incrementudc\u001b[1;34m(self)\u001b[0m\n\u001b[0;32m   1282\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m TurtleScreen\u001b[38;5;241m.\u001b[39m_RUNNING:\n\u001b[0;32m   1283\u001b[0m     TurtleScreen\u001b[38;5;241m.\u001b[39m_RUNNING \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;01mTrue\u001b[39;00m\n\u001b[1;32m-> 1284\u001b[0m     \u001b[38;5;28;01mraise\u001b[39;00m Terminator\n\u001b[0;32m   1285\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_tracing \u001b[38;5;241m>\u001b[39m \u001b[38;5;241m0\u001b[39m:\n\u001b[0;32m   1286\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_updatecounter \u001b[38;5;241m+\u001b[39m\u001b[38;5;241m=\u001b[39m \u001b[38;5;241m1\u001b[39m\n",
-      "\u001b[1;31mTerminator\u001b[0m: "
-     ]
-    }
-   ],
-   "source": [
-    "\n",
-    "\n",
+import pygame
+import sys
+import random
+
+# Constants
+WIDTH, HEIGHT = 400, 600
+GROUND_HEIGHT = 100
+BIRD_SIZE = 40
+PIPE_WIDTH = 60
+PIPE_GAP = 200
+GRAVITY = 0.5
+FLAP_STRENGTH = 10
+FORWARD_VELOCITY = 2  # Forward velocity of the bird
+COUNTDOWN_TIME = 3 * 1000  # 3 seconds
+
+# Colors
+WHITE = (255, 255, 255)
+GREEN = (0, 255, 0)
+
+# Initialize Pygame
+pygame.init()
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Flappy Bird Clone")
+
+# Initialize clock
+clock = pygame.time.Clock()
+
+# Load bird image
+bird_image = pygame.image.load("bird.png")
+bird_image = pygame.transform.scale(bird_image, (BIRD_SIZE, BIRD_SIZE))
+
+# Game variables
+bird_x = WIDTH // 4
+bird_y = HEIGHT // 2
+bird_velocity = 0
+score = 0
+game_over = False
+countdown_start_time = pygame.time.get_ticks() + COUNTDOWN_TIME
+PIPE_HEIGHT = random.randint(100, 400)  # Initial pipe height
+
+# Initial pipe position
+pipe_x = WIDTH
+PIPE_HEIGHT = random.randint(100, 400)
     "import turtle\n",
     "import time\n",
     "import random\n",
